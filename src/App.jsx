@@ -40,7 +40,7 @@ function App() {
     handleCardClick,
   } = UseGameLogic(cardValues);
   return (
-    <>
+    <div className="app">
       <GameHeader score={score} moves={moves} onReset={initializeGame} />
 
       {isGameComplete && <WinMessage moves={moves} />}
@@ -50,7 +50,7 @@ function App() {
           <Card key={card.id} card={card} onClick={handleCardClick} />
         ))}
       </div>
-    </>
+      </div>
   );
 }
 
